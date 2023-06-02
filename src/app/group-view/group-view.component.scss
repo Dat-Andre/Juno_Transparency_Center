@@ -1,0 +1,24 @@
+.linkito :hover{
+  cursor: pointer;
+}
+
+.adjust-cards{
+  margin: 5px 50px;
+}
+
+.container-of-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.totals{
+  display: flex;
+  flex-direction: column;
+}
+
+.span-container{
+  display: flex;
+  justify-content: space-between;
+}

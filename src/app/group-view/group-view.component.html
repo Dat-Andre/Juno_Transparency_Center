@@ -1,0 +1,19 @@
+<div class="container-of-cards">
+<div *ngFor="let member of this.group.members" class="adjust-cards">
+  <p-card [header]="member?.name" [subheader]="'# Wallets: ' + member?.wallets?.length" [style]="{ width: '300px' }">
+    <ng-template pTemplate="header">
+        <img alt="Juno_MG" src="..\..\assets\img\juno_bright.svg" />
+    </ng-template>
+    <div class="totals">
+    <span class="span-container">Liquid &nbsp;<b> {{member?.totalLiq}}$JUNO</b></span>
+    <span class="span-container">Staked &nbsp;<b> {{member?.totalStaked}}$JUNO</b></span>
+    <p-divider></p-divider>
+    <span class="span-container">Total &nbsp;<b> {{member?.totalStaked + member?.totalLiq}}$JUNO</b></span>
+  </div>
+    <ng-template pTemplate="footer">
+      <p-button label="Detail" icon="pi pi-chevron-right" (click)="navigateToMemberDetail(member.name)"></p-button>
+  </ng-template>
+  </p-card>
+</div>
+</div>
+
